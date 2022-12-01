@@ -7,3 +7,4 @@
 - [ ] Symbolab like equation and variable entry system
     - [ ] Hold select varients of key or variable
     - [ ] Arrow key movement
+
