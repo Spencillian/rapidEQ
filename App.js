@@ -1,9 +1,10 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, FlatList } from 'react-native';
+import { StyleSheet, View, FlatList, Text } from 'react-native';
 import { useState } from 'react';
 import MathViewFallback from 'react-native-math-view/src/fallback';
+import evaluatex from 'evaluatex';
 
-const equationList = [
+const DATA = [
   { id: '1', equation: 'x=\\frac{-b\\pm\\sqrt{b^2-4ac}}{2a}' },
   { id: '2', equation: 'hello' },
   { id: '3', equation: 'world' },
@@ -22,8 +23,11 @@ function EquationBox({ item }) {
 }
 
 export default function App() {
+  const [equationList, _] = useState(DATA)
+  const result = evaluatex('1 + 2 * 3 / 4')()
   return (
     <View style={styles.container}>
+      <Text>{result}</Text>
       <FlatList 
         data={equationList}
         renderItem={EquationBox}
