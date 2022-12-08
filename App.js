@@ -2,7 +2,7 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, View, FlatList, Text } from 'react-native';
 import { useState } from 'react';
 import MathViewFallback from 'react-native-math-view/src/fallback';
-import evaluatex from 'evaluatex';
+import evaluatex from 'evaluatex/dist/evaluatex';
 
 const DATA = [
   { id: '1', equation: 'x=\\frac{-b\\pm\\sqrt{b^2-4ac}}{2a}' },
